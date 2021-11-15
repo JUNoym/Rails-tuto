@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   resources :users
+  resources :microposts, only: [:create, :destroy]
 end
 
 # HTTPリクエスト	URL	名前付きルート	アクション名	用途
